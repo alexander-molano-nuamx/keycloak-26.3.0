@@ -14,6 +14,7 @@
     --text-primary: rgba(0, 0, 0, 0.87);
     --text-secondary: rgba(0, 0, 0, 0.60);
     --backgroundErrorText: #ff8282;
+    --background-default: #FFF;
 
     --pf-global--danger-color--200: #FD6B6B;
 
@@ -273,6 +274,66 @@ label {
     line-height: 1.3333333;
     border-radius: 4px;
     text-transform: uppercase;
+}
+
+/* Forzar que los iconos de contraseña sean siempre visibles cuando corresponda */
+#show-icon,
+#hide-icon {
+    position: absolute !important;
+    top: 50% !important;
+    right: 12px !important;
+    transform: translateY(-50%) !important;
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+}
+
+/* Sobrescribir cualquier regla que pueda ocultar los iconos */
+#show-icon[style*="display: block"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#hide-icon[style*="display: block"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Asegurar que el contenedor del input no oculte los iconos */
+.kcInputGroup,
+.kc-input-group {
+    position: relative !important;
+}
+
+.kcInputGroup span,
+.kc-input-group span {
+    position: relative !important;
+    display: block !important;
+}
+
+/* Prevenir que la clase filled afecte los iconos */
+input.filled~span #show-icon,
+input.filled~span #hide-icon,
+input.filled+span #show-icon,
+input.filled+span #hide-icon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Si tienes alguna regla CSS que oculte elementos con filled, sobrescríbela */
+.filled~*,
+.filled+* {
+    /* NO aplicar display: none a los iconos */
+}
+
+.filled~span:not([id*="icon"]),
+.filled+span:not([id*="icon"]) {
+    /* Solo aplicar estilos a spans que NO contengan iconos */
 }
 
 /*

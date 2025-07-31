@@ -550,7 +550,7 @@ ul#kc-totp-supported-apps {
     padding: 30px 40px 40px 40px;
     max-width: 500px;
     border-radius: 16px;
-    background: var(--background-default, #FFF);
+    background: var(--background-default);
 }
 
 /*phone*/
