@@ -202,8 +202,14 @@ a:focus {
     display: none !important;
 }
 
-.form-group input#username~.fa,
-.form-group input#password~.fa {
+.form-group input#username~.fa:not(#show-icon):not(#hide-icon),
+.form-group input#password~.fa:not(#show-icon):not(#hide-icon) {
+    display: none !important;
+}
+
+/* O si quieres ser más específico, usa solo para elementos .fa */
+.form-group input#username~.fa.pf-icon,
+.form-group input#password~.fa.pf-icon {
     display: none !important;
 }
 
@@ -276,7 +282,6 @@ label {
     text-transform: uppercase;
 }
 
-/* Forzar que los iconos de contraseña sean siempre visibles cuando corresponda */
 #show-icon,
 #hide-icon {
     position: absolute !important;
@@ -290,50 +295,17 @@ label {
     pointer-events: auto !important;
 }
 
-/* Sobrescribir cualquier regla que pueda ocultar los iconos */
-#show-icon[style*="display: block"] {
+/* Asegurar que los iconos no sean afectados por otras reglas */
+#show-icon,
+#hide-icon {
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
+#show-icon[style*="display: block"],
 #hide-icon[style*="display: block"] {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-}
-
-/* Asegurar que el contenedor del input no oculte los iconos */
-.kcInputGroup,
-.kc-input-group {
-    position: relative !important;
-}
-
-.kcInputGroup span,
-.kc-input-group span {
-    position: relative !important;
-    display: block !important;
-}
-
-/* Prevenir que la clase filled afecte los iconos */
-input.filled~span #show-icon,
-input.filled~span #hide-icon,
-input.filled+span #show-icon,
-input.filled+span #hide-icon {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-/* Si tienes alguna regla CSS que oculte elementos con filled, sobrescríbela */
-.filled~*,
-.filled+* {
-    /* NO aplicar display: none a los iconos */
-}
-
-.filled~span:not([id*="icon"]),
-.filled+span:not([id*="icon"]) {
-    /* Solo aplicar estilos a spans que NO contengan iconos */
 }
 
 /*
