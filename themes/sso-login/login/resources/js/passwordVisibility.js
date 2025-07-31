@@ -71,42 +71,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Código temporal para debuggear 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const input = document.getElementById("password");
-//   const showIcon = document.getElementById("show-icon");
-//   const hideIcon = document.getElementById("hide-icon");
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("password");
+  const showIcon = document.getElementById("show-icon");
+  const hideIcon = document.getElementById("hide-icon");
 
-//   function debugIconVisibility() {
-//     console.log("=== DEBUG ICONS ===");
-//     console.log("Input type:", input?.type);
-//     console.log("Input value:", input?.value);
-//     console.log("Input classes:", input?.className);
+  function debugIconVisibility() {
+    console.log("=== DEBUG ICONS ===");
+    console.log("Input type:", input?.type);
+    console.log("Input value:", input?.value);
+    console.log("Input classes:", input?.className);
     
-//     if (showIcon) {
-//       const showStyles = window.getComputedStyle(showIcon);
-//       console.log("Show icon display:", showStyles.display);
-//       console.log("Show icon visibility:", showStyles.visibility);
-//       console.log("Show icon opacity:", showStyles.opacity);
-//       console.log("Show icon inline style:", showIcon.style.cssText);
-//     }
+    if (showIcon) {
+      const showStyles = window.getComputedStyle(showIcon);
+      console.log("Show icon display:", showStyles.display);
+      console.log("Show icon visibility:", showStyles.visibility);
+      console.log("Show icon opacity:", showStyles.opacity);
+      console.log("Show icon inline style:", showIcon.style.cssText);
+    }
     
-//     if (hideIcon) {
-//       const hideStyles = window.getComputedStyle(hideIcon);
-//       console.log("Hide icon display:", hideStyles.display);
-//       console.log("Hide icon visibility:", hideStyles.visibility);
-//       console.log("Hide icon opacity:", hideStyles.opacity);
-//       console.log("Hide icon inline style:", hideIcon.style.cssText);
-//     }
-//     console.log("==================");
-//   }
+    if (hideIcon) {
+      const hideStyles = window.getComputedStyle(hideIcon);
+      console.log("Hide icon display:", hideStyles.display);
+      console.log("Hide icon visibility:", hideStyles.visibility);
+      console.log("Hide icon opacity:", hideStyles.opacity);
+      console.log("Hide icon inline style:", hideIcon.style.cssText);
+    }
+    console.log("==================");
+  }
 
-//   if (input) {
-//     input.addEventListener("input", function() {
-//       console.log("Input event triggered");
-//       setTimeout(debugIconVisibility, 100);
-//     });
+  if (input) {
+    input.addEventListener("input", function() {
+      console.log("Input event triggered");
+      setTimeout(debugIconVisibility, 100);
+    });
     
-//     // Debug inicial
-//     setTimeout(debugIconVisibility, 1000);
-//   }
-// });
+    // Debug inicial
+    setTimeout(debugIconVisibility, 1000);
+  }
+});
