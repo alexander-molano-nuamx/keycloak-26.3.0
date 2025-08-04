@@ -90,15 +90,24 @@ button#kc-current-locale-link::after {
 }
 
 div.kc-logo-text {
-    background-image: url(../img/Logo.svg);
+    /* background-image: url(../img/Logo.svg); */
     background-repeat: no-repeat;
     height: 48px;
-    width: 212px;
-    margin: 0 auto;
+    margin: 80px 0 40px auto;
 }
 
 div.kc-logo-text span {
-    display: none;
+
+    margin: 0 auto;
+
+    text-align: center;
+    color: #fff;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: var(--fontFamily);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 116.7%;
 }
 
 #kc-header {
@@ -111,7 +120,7 @@ div.kc-logo-text span {
     color: var(--text-primary);
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 
     font-family: var(--fontFamily);
     font-size: 24px;

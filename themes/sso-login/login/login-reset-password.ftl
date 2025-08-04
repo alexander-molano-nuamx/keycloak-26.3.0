@@ -28,9 +28,15 @@
                     <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                         <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
                             <div class="${properties.kcFormOptionsWrapperClass!}">
-                                <span><a href="${url.loginUrl}">
+                                <span>
+                                    <a href="${url.loginUrl}">
+                                        <img
+                                            src="${url.resourcesPath}/img/Arrow-Down-2.svg"
+                                            alt="Volver"
+                                            style="width: 16px; height: 16px; vertical-align: middle; margin-right: 6px;" />
                                         ${kcSanitize(msg("backtoLogin"))?no_esc}
-                                    </a></span>
+                                    </a>
+                                </span>
                             </div>
                         </div>
                         <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
