@@ -25,7 +25,12 @@ p.instruction {
 }
 
 .pf-c-button.pf-m-control {
-    border-color: rgba(230, 230, 230, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 4px !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #0F6CBD;
+    text-transform: uppercase;
 }
 
 h1#kc-page-title {
@@ -308,7 +313,7 @@ ul#kc-totp-supported-apps {
 
 /* Social */
 .kc-social-links {
-    margin-top: 20px;
+    margin-top: 4px;
 }
 
 .kc-social-links li {
@@ -316,23 +321,37 @@ ul#kc-totp-supported-apps {
 }
 
 .kc-social-provider-logo {
-    font-size: 23px;
-    width: 30px;
-    height: 25px;
-    float: left;
+    font-size: 18px;
+    float: inherit;
+    padding: 0px 16px 0px 0px;
 }
 
 .kc-social-gray {
-    color: var(--pf-global--Color--200);
+    color: var(--text-secondary);
+}
+
+.kc-social-text {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: var(--fontFamily);
+    font-size: var(--pf-c-form__label--FontSize);
+    font-style: normal;
+    font-weight: var(--pf-global--FontWeight--normal);
+    line-height: 143%;
+    letter-spacing: 0.17px;
+    text-decoration-style: solid;
+}
+
+.kc-social-white {
+    color: var(--primaryWhite) !important;
 }
 
 .kc-social-gray h2 {
-    font-size: 1em;
+    font-size: 1.25em;
 }
 
 .kc-social-item {
-    margin-bottom: var(--pf-global--spacer--sm);
-    font-size: 15px;
+    /* margin-bottom: var(--pf-global--spacer--sm); */
+    font-size: 14px;
     text-align: center;
 }
 
@@ -341,7 +360,7 @@ ul#kc-totp-supported-apps {
 }
 
 .kc-social-icon-text {
-    left: -15px;
+    left: -8px;
 }
 
 .kc-social-grid {

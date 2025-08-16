@@ -28,6 +28,7 @@
 
     --Color-Semantics-Green-100: #9DF4D9;
     --info-main: #9EF5FF;
+    --info-dark: #2697B7;
     --warning-main: #FFA47F;
 
     /* 🔤 Tipografía general */
@@ -182,6 +183,13 @@ span.custom-span {
     margin-bottom: 1rem;
     background-color: #0F6CBD;
     text-transform: uppercase;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#kc-form-button-microsoft:hover {
+    background-color: var(--info-dark);
 }
 
 :focus {

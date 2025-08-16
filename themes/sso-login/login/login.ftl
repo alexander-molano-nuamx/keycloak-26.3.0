@@ -85,14 +85,14 @@ c<#import "template.ftl" as layout>
                         </#if>/>
                         <input id="kc-form-button" tabindex="7" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}" />
                     </div>
-                    <button id="kc-form-button-microsoft" tabindex="7"
+                    <#-- <button id="kc-form-button-microsoft" tabindex="7"
                         class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
                         name="login" type="submit">
                         <i class="fa fa-windows" aria-hidden="true" style="margin-right: 8px;"></i>
                         ${msg("doLogIn2")}
-                    </button>
-                    <#-- <input id="kc-form-button-microsoft" tabindex="7" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn2")}" /> -->
-                    </form>
+                        </button>
+                        <input id="kc-form-button-microsoft" tabindex="7" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn2")}" /> -->
+                        </form>
         </#if>
         </div>
         </div>
@@ -114,35 +114,35 @@ c<#import "template.ftl" as layout>
                 <#if realm.password && social?? && social.providers?has_content>
                     <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
                         <hr />
-                        <h2>
-                            ${msg("identity-provider-login-label")}
-                        </h2>
+                        <div>
+                            ${msg("identityproviderCustomMessage")}
+                        </div>
                         <ul class="${properties.kcFormSocialAccountListClass!}
 <#if social.providers?size gt 3>
 ${properties.kcFormSocialAccountListGridClass!}
 </#if>">
                             <#list social.providers as p>
                                 <li>
-                                    <a id="social-${p.alias}" class="${properties.kcFormSocialAccountListButtonClass!}
-<#if social.providers?size gt 3>
-${properties.kcFormSocialAccountGridItem!}
-</#if>"
-                                        type="button" href="${p.loginUrl}">
-                                        <#if p.iconClasses?has_content>
-                                            <i class="${properties.kcCommonLogoIdP!} ${p.iconClasses!}" aria-hidden="true"></i>
-                                            <span class="${properties.kcFormSocialAccountNameClass!} kc-social-icon-text">
-                                                ${p.displayName!}
-                                            </span>
-                                            <#else>
-                                                <span class="${properties.kcFormSocialAccountNameClass!}">
-                                                    ${p.displayName!}
-                                                </span>
-                                        </#if>
-                                    </a>
-                                </li>
-                            </#list>
-                        </ul>
-                    </div>
+                                    <button id="kc-form-button-microsoft" class="${properties.kcFormSocialAccountListButtonClass!}"
+                                        <#if social.providers?size gt 3>
+                                        ${properties.kcFormSocialAccountGridItem!}
+                </#if>"
+                type="button" href="${p.loginUrl}">
+                <#if p.iconClasses?has_content>
+                    <i class="${properties.kcCommonLogoIdP!} ${p.iconClasses!}" aria-hidden="true"></i>
+                    <span class="${properties.kcFormSocialAccountNameClass!} kc-social-icon-text">
+                        ${p.displayName!}
+                    </span>
+                    <#else>
+                        <span class="${properties.kcFormSocialAccountNameClass!}">
+                            ${p.displayName!}
+                        </span>
+                </#if>
+                </button>
+                </li>
+                </#list>
+                </ul>
+                </div>
                 </#if>
                 </#if>
     </@layout.registrationLayout>
