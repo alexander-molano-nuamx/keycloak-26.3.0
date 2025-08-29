@@ -15,6 +15,9 @@
     --text-secondary: rgba(0, 0, 0, 0.60);
     --backgroundErrorText: #ff8282;
     --background-default: #FFF;
+    --divider: rgba(0, 0, 0, 0.12);
+    --action-selected: rgba(0, 0, 0, 0.08);
+    --primary-states-hover: rgba(255, 66, 1, 0.08);
 
     --pf-global--danger-color--200: #FD6B6B;
 
