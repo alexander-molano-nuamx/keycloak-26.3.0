@@ -143,6 +143,15 @@ ${properties.kcFormSocialAccountListGridClass!}
                 </#list>
                 </ul>
                 </div>
+                <div id="kc-restricted-device" class="restricted-card">
+                    <img src="${url.resourcesPath}/img/Alert-Icon.svg" alt="Dispositivo restringido" class="restricted-icon" />
+                    <h2>
+                        ${msg("textTitle")}
+                    </h2>
+                    <p>
+                        ${msg("copyText")}
+                    </p>
+                </div>
                 </#if>
                 </#if>
     </@layout.registrationLayout>

@@ -443,9 +443,9 @@ ul#kc-totp-supported-apps {
 
 @media (max-width: 767px) {
 
-    .login-pf body {
+    /* .login-pf body {
         background: white;
-    }
+    } */
 
     #kc-header {
         padding-left: 15px;
@@ -467,6 +467,7 @@ ul#kc-totp-supported-apps {
         width: 150px;
         height: 32px;
         background-size: 100%;
+        display: none !important;
     }
 
     #kc-form {
@@ -585,8 +586,7 @@ ul#kc-totp-supported-apps {
 @media (max-width: 767px) {
     .login-pf-page .card-pf {
         max-width: none;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 20px 40px 30px 40px;
         padding-top: 0;
         border-top: 0;
         box-shadow: 0 0;

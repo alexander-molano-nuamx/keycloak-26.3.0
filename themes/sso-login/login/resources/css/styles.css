@@ -318,3 +318,48 @@ label {
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+#kc-restricted-device {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#kc-restricted-device .restricted-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+#kc-restricted-device h2 {
+    color: var(--orange400);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#kc-restricted-device p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* En pantallas móviles y tablets, ocultamos el form y mostramos la card */
+@media (max-width: 1024px) {
+
+    #kc-form,
+    #kc-social-providers,
+    #kc-form-buttons,
+    #kc-registration-container,
+    #kc-header-text {
+        display: none !important;
+    }
+
+    #kc-header {
+        display: none !important;
+    }
+
+    #kc-restricted-device {
+        display: flex !important;
+    }
+}
