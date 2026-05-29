@@ -575,10 +575,11 @@ ul#kc-totp-supported-apps {
 
 .card-pf {
     margin: 0 auto;
-    box-shadow: var(--pf-global--BoxShadow--lg);
-    padding: 30px 40px 40px 40px;
     max-width: 500px;
-    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--pf-global--primary-color--50);
+    border-radius: 0.25em 1.25em;
     background: var(--background-default);
 }
 
