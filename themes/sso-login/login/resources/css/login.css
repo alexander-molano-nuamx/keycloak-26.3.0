@@ -106,7 +106,7 @@ div.kc-logo-text span {
     margin: 0 auto;
 
     text-align: center;
-    color: #fff;
+    color: var(--text-primary);
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: var(--fontFamily);
     font-size: 48px;
